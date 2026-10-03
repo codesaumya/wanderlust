@@ -23,17 +23,7 @@ router.get("/",wrapAsync(async (req,res) => {
         res.render("listings/index.ejs",{alllistings});
 
 }));
-//category route
-router.get("/category/:category", wrapAsync(async (req, res) => {
-    console.log("CATEGORY ROUTE HIT");
-    let { category } = req.params;
 
-    let allListings = await Listing.find({
-        category: category
-    });
-
-    res.render("listings/index.ejs", { allListings });
-}));
 
 //new route
 router.get("/new", isLoggedIn,(req, res) =>{

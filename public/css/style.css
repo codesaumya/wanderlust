@@ -22,9 +22,11 @@ flex: 1;
     color: #fe424f;
     font-size: 2rem;
 }
+
 .nav-link{
     color: #222222 !important;
 }
+
 .f-info-links a{
     text-decoration: none;
     color: #222222;
@@ -97,4 +99,24 @@ flex: 1;
 .show-card{
     padding-left: 0;
     padding-right: 0;
+}
+@media (max-width: 768px) {
+
+    .navbar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .navbar-collapse {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem !important;
+        background-color: #f8f9fa !important;
+    }
+
+    .navbar .container,
+    .navbar .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
 }

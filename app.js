@@ -14,6 +14,7 @@ const flash = require("connect-flash");
 const userRouter = require("./routes/user.js");
 const listingRouter = require("./routes/listing.js");
 const reviewRouter =  require("./routes/review.js");
+
 // const path = require("path");
 
 
@@ -36,6 +37,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
+app.use("/listings", listingRouter);
 
 
 const sessionOptions ={
